@@ -16,7 +16,7 @@ provider "aws" {
 
 data "aws_subnet" "subnet" {
   vpc_id = "${var.vpc_id}"
-  availability_zone = "$(var.availability_zone)"
+  availability_zone = "${var.availability_zone}"
 }
 
 data "aws_security_group" "group_name" {
