@@ -105,7 +105,7 @@
       "label": "Vpc Id",
       "description": "Generated",
       "type": "string",
-      "default": "vpc-f4b3459f",
+      "default": "default",
       "validation": "",
       "group_name": "",
       "required": true,
