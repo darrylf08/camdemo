@@ -119,7 +119,7 @@
       "label": "Group Name",
       "description": "Generated",
       "type": "string",
-      "default": "",
+      "default": "default",
       "validation": "",
       "group_name": "security",
       "required": true,
