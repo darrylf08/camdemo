@@ -13,15 +13,19 @@ terraform {
 provider "aws" {
 }
 
+data "aws_vpc" "default" {
+      default = true
+}
+
 
 data "aws_subnet" "subnet" {
-  vpc_id = "${var.vpc_id}"
+  vpc_id = "${data.aws_vpc.default.id}"
   availability_zone = "${var.availability_zone}"
 }
 
 data "aws_security_group" "group_name" {
   name = "${var.group_name}"
-  vpc_id = "${var.vpc_id}"  # Generated
+  vpc_id = "${data.aws_vpc.default.id}"  # Generated
 }
 
 resource "aws_instance" "aws_server" {
