@@ -19,7 +19,7 @@ data "aws_vpc" "default" {
 
 data "aws_subnet" "subnet" {
   vpc_id = "${data.aws_vpc.default.id}"
-##  availability_zone = "${var.availability_zone}"
+  availability_zone = "${var.availability_zone}"
 }
 
 data "aws_security_group" "group_name" {

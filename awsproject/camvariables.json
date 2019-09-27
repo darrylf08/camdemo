@@ -35,7 +35,7 @@
       "label": "Aws Server Ami",
       "description": "Generated",
       "type": "string",
-      "default": "",
+      "default": "ami-00c03f7f7f2ec15c3",
       "validation": "",
       "group_name": "instances",
       "required": true,
