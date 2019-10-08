@@ -29,24 +29,26 @@ data "aws_security_group" "group_name" {
 
 resource "aws_instance" "aws_server" {
   ami = "${var.aws_server_ami}"
-  key_name = "${aws_key_pair.auth.id}"
+#  key_name = "${aws_key_pair.auth.id}"
+  key_name = "${var.aws_key_pair_name}"  # Generated
   instance_type = "${var.aws_server_aws_instance_type}"
   availability_zone = "${var.availability_zone}"
   subnet_id  = "${data.aws_subnet.subnet.id}"
   vpc_security_group_ids = ["${data.aws_security_group.group_name.id}"]
+  
   tags {
     Name = "${var.aws_server_name}"
   }
 }
 
-resource "tls_private_key" "ssh" {
-    algorithm = "RSA"
-}
+# resource "tls_private_key" "ssh" {
+#     algorithm = "RSA"
+# }
 
-resource "aws_key_pair" "auth" {
-    key_name = "${var.aws_key_pair_name}"
-    public_key = "${tls_private_key.ssh.public_key_openssh}"
-}
+# resource "aws_key_pair" "auth" {
+#    key_name = "${var.aws_key_pair_name}"
+#    public_key = "${tls_private_key.ssh.public_key_openssh}"
+# }
 
 resource "aws_eip" "elastic_ip" {
   vpc = true
