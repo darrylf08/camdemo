@@ -29,11 +29,6 @@ variable "aws_key_pair_name" {
   description = "Generated"
 }
 
-variable "vpc_id" {
-  type = "string"
-  description = "Generated"
-}
-
 variable "group_name" {
   type = "string"
   description = "Generated"
