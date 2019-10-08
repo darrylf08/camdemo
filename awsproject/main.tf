@@ -13,13 +13,17 @@ terraform {
 provider "aws" {
 }
 
+data "aws_availability_zones" "available" {
+  state = "available"
+}
+
 data "aws_vpc" "default" {
       default = true
 }
 
 data "aws_subnet" "subnet" {
   vpc_id = "${data.aws_vpc.default.id}"
-  availability_zone = "${var.availability_zone}"
+  availability_zone = "${data.aws_availability_zones.available.names[0]}"
 }
 
 data "aws_security_group" "group_name" {
@@ -32,7 +36,7 @@ resource "aws_instance" "aws_server" {
 #  key_name = "${aws_key_pair.auth.id}"
   key_name = "${var.aws_key_pair_name}"  # Generated
   instance_type = "${var.aws_server_aws_instance_type}"
-  availability_zone = "${var.availability_zone}"
+  availability_zone = "${data.aws_availability_zones.available.names[0]}"
   subnet_id  = "${data.aws_subnet.subnet.id}"
   vpc_security_group_ids = ["${data.aws_security_group.group_name.id}"]
   associate_public_ip_address = "true"

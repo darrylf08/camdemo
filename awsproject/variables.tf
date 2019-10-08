@@ -14,11 +14,6 @@ variable "aws_server_aws_instance_type" {
   description = "Generated"
 }
 
-variable "availability_zone" {
-  type = "string"
-  description = "Generated"
-}
-
 variable "aws_server_name" {
   type = "string"
   description = "Generated"

@@ -59,20 +59,6 @@
       "immutable_after_create": false
     },
     {
-      "name": "availability_zone",
-      "label": "Availability Zone",
-      "description": "Generated",
-      "type": "string",
-      "default": "us-east-2c",
-      "validation": "",
-      "group_name": "",
-      "required": true,
-      "secured": false,
-      "hidden": false,
-      "immutable": false,
-      "immutable_after_create": false
-    },
-    {
       "name": "aws_server_name",
       "label": "Aws Server Name",
       "description": "Generated",
@@ -110,19 +96,31 @@
       "group_name": "security",
       "required": true,
       "secured": false,
-      "hidden": false,
+      "hidden": true,
       "immutable": false,
       "immutable_after_create": false
     }
   ],
-  "template_output_params": [  {
-    "name": "aws_server_ip_address",
-    "label": "Aws Server Ip Address",
-    "description": "Aws Server Ip Address",
-    "group_name": "",
-    "secured": false,
-    "hidden": false,
-    "shortname": "",
-    "type": "string"
-  } ]
+  "template_output_params": [
+    {
+      "name": "aws_server_ip_address",
+      "label": "Aws Server Ip Address",
+      "description": "Aws Server Ip Address",
+      "group_name": "",
+      "secured": false,
+      "hidden": false,
+      "shortname": "",
+      "type": "string"
+    },
+    {
+      "name": "aws_server_public_dns",
+      "label": "Aws Server Public Dns",
+      "description": "Aws Server Public Dns",
+      "group_name": "",
+      "secured": false,
+      "hidden": false,
+      "shortname": "",
+      "type": "string"
+    }
+  ]
 }
