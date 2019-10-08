@@ -35,7 +35,7 @@ resource "aws_instance" "aws_server" {
   availability_zone = "${var.availability_zone}"
   subnet_id  = "${data.aws_subnet.subnet.id}"
   vpc_security_group_ids = ["${data.aws_security_group.group_name.id}"]
-  
+  associate_public_ip_address = "true"
   tags {
     Name = "${var.aws_server_name}"
   }
@@ -50,12 +50,3 @@ resource "aws_instance" "aws_server" {
 #    public_key = "${tls_private_key.ssh.public_key_openssh}"
 # }
 
-resource "aws_eip" "elastic_ip" {
-  vpc = true
-}
-
-resource "aws_eip_association" "aws_server_elastic_ip_eip_association" {
-
-  instance_id   = "${aws_instance.aws_server.id}"
-  allocation_id = "${aws_eip.elastic_ip.id}"
-}
