@@ -95,7 +95,7 @@
       "label": "Vm Instance Disk Name",
       "description": "The name of the disk. Forces a new disk if changed. This should only be a longer path if attaching an external disk.",
       "type": "string",
-      "default": "disk0",
+      "default": "disk0.vmdk",
       "validation": "",
       "group_name": "instances",
       "required": true,
