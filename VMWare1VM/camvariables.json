@@ -123,7 +123,7 @@
       "label": "Vm Instance Template Name",
       "description": "Generated",
       "type": "string",
-      "default": "Ubuntu16srv",
+      "default": "Ubuntu18srv",
       "validation": "",
       "group_name": "instances",
       "required": true,
