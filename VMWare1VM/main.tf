@@ -54,7 +54,8 @@ resource "vsphere_virtual_machine" "vm_instance" {
     template_uuid = "${data.vsphere_virtual_machine.vm_instance_template.id}"
   }
   disk {
-    name = "${var.vm_instance_disk_name}"
+    label = "${var.vm_instance_disk_name}"
     size = "${var.vm_instance_disk_size}"
+    thin_provisioned = "${data.vsphere_virtual_machine.vm_instance_template.disks.0.thin_provisioned}"
   }
 }
