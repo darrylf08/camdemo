@@ -30,6 +30,11 @@ data "vsphere_datastore" "vm_instance_datastore" {
   datacenter_id = "${data.vsphere_datacenter.vm_instance_datacenter.id}"
 }
 
+data "vsphere_resource_pool" "pool" {
+  name          = "${var.vm_instance_resource_pool}"
+  datacenter_id = "${data.vsphere_datacenter.vm_instance_datacenter.id}"
+}
+
 data "vsphere_network" "network1" {
   name          = "${var.network1_network_name}"
   datacenter_id = "${data.vsphere_datacenter.vm_instance_datacenter.id}"
@@ -41,7 +46,7 @@ resource "vsphere_virtual_machine" "vm_instance" {
   num_cpus      = "${var.vm_instance_number_of_vcpu}"
   memory        = "${var.vm_instance_memory}"
   guest_id = "${data.vsphere_virtual_machine.vm_instance_template.guest_id}"
-  resource_pool_id = "${var.vm_instance_resource_pool}"
+  resource_pool_id = "${data.vsphere_resource_pool.pool.id}"
   network_interface {
     network_id = "${data.vsphere_network.network1.id}"
   }
