@@ -4,21 +4,6 @@
 ##
 #####################################################################
 
-variable "user" {
-  type = "string"
-  description = "Generated"
-}
-
-variable "password" {
-  type = "string"
-  description = "Generated"
-}
-
-variable "vsphere_server" {
-  type = "string"
-  description = "Generated"
-}
-
 variable "allow_unverified_ssl" {
   type = "string"
   description = "Generated"
