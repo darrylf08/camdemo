@@ -113,9 +113,9 @@
       "type": "string"
     },
     {
-      "name": "aws_server_url",
-      "label": "Aws Server Public Dns",
-      "description": "Aws Server Public Dns",
+      "name": "aws_server_login",
+      "label": "Aws Server Login",
+      "description": "Aws Server SSH URL",
       "group_name": "",
       "secured": false,
       "hidden": false,
