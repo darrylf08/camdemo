@@ -113,7 +113,7 @@
       "type": "string"
     },
     {
-      "name": "aws_server_public_dns",
+      "name": "aws_server_url",
       "label": "Aws Server Public Dns",
       "description": "Aws Server Public Dns",
       "group_name": "",

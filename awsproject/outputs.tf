@@ -7,6 +7,6 @@
 output "aws_server_ip_address" {
   value =  "${aws_instance.aws_server.public_ip}"
   }
-output "aws_server_public_dns" {
-  value =  "${aws_instance.aws_server.public_dns}"
+output "aws_server_url" {
+  value =  "ssh://ec-user@${aws_instance.aws_server.public_dns}/c:\\Temp\\SSH_URL\\key-pair-1.ppk"
   }
