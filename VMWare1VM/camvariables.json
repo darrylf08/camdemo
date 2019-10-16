@@ -179,7 +179,7 @@
       "label": "Network 1 Network Name",
       "description": "Generated",
       "type": "string",
-      "default": "NFS",
+      "default": "Dewald_VLAN9",
       "validation": "",
       "group_name": "vsphere_virtual_machine_networks",
       "required": true,
