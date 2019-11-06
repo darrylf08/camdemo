@@ -1,0 +1,13 @@
+{
+   "name": "GoogleTest",
+   "description": "Description for GoogleTest.",
+   "type": "userCreated",
+   "manifest": {
+     "template_type": "Terraform",
+     "template_format": "HCL",
+     "template_provider": "Google Cloud"
+   },
+   "metadata": {
+     "bullets": []
+   }
+ }

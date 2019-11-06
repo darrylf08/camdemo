@@ -1,0 +1,100 @@
+{
+  "input_datatypes": [ ],
+  "input_namespaces": [ ],
+  "output_namespace": "",
+  "input_groups": [  {
+    "name": "Instances-google_compute_instance.default",
+    "label": "Instances - google_compute_instance.default"
+  } ],
+  "output_groups": [ ],
+  "template_input_params": [
+    {
+      "name": "unique_resource_name",
+      "label": "Unique Resource Name",
+      "description": "A unique name for the resource, required by GCE.",
+      "type": "string",
+      "default": "",
+      "validation": "",
+      "group_name": "Instances-google_compute_instance.default",
+      "required": true,
+      "secured": false,
+      "hidden": false,
+      "immutable": false,
+      "immutable_after_create": false
+    },
+    {
+      "name": "machine_type",
+      "label": "Machine Type",
+      "description": "The machine type to create.",
+      "type": "string",
+      "default": "n1-standard-1",
+      "validation": "",
+      "group_name": "Instances-google_compute_instance.default",
+      "required": true,
+      "secured": false,
+      "hidden": false,
+      "immutable": false,
+      "immutable_after_create": false
+    },
+    {
+      "name": "boot_disk",
+      "label": "Boot Disk",
+      "description": "The boot disk for the instance.",
+      "type": "string",
+      "default": "centos-cloud/centos-7",
+      "validation": "",
+      "group_name": "Instances-google_compute_instance.default",
+      "required": true,
+      "secured": false,
+      "hidden": false,
+      "immutable": false,
+      "immutable_after_create": false
+    },
+    {
+      "name": "zone",
+      "label": "Zone",
+      "description": "The zone the resource should be created in.",
+      "type": "string",
+      "default": "us-central1-a",
+      "validation": "",
+      "group_name": "Instances-google_compute_instance.default",
+      "required": true,
+      "secured": false,
+      "hidden": false,
+      "immutable": false,
+      "immutable_after_create": false
+    }
+  ],
+  "template_output_params": [
+    {
+      "name": "Name",
+      "label": "Name",
+      "description": null,
+      "group_name": "",
+      "secured": false,
+      "hidden": false,
+      "shortname": "",
+      "type": "string"
+    },
+    {
+      "name": "External_IP",
+      "label": "External Ip",
+      "description": null,
+      "group_name": "",
+      "secured": false,
+      "hidden": false,
+      "shortname": "",
+      "type": "string"
+    },
+    {
+      "name": "Internal_IP",
+      "label": "Internal Ip",
+      "description": null,
+      "group_name": "",
+      "secured": false,
+      "hidden": false,
+      "shortname": "",
+      "type": "string"
+    }
+  ]
+}
